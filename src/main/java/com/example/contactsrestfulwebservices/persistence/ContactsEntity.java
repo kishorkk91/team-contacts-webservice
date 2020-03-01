@@ -12,9 +12,6 @@ public class ContactsEntity {
 	@GeneratedValue
 	private Integer id;
 
-	@NotBlank(message = "Email is mandatory")
-	private String email;
-
 	@Size(min = 3, message = "First Name should have at least 3 characters")
 	@Column(nullable = false)
 	private String firstName;
@@ -23,14 +20,17 @@ public class ContactsEntity {
 	@Column(nullable = false)
 	private String lastName;
 
+	@NotBlank(message = "Email is mandatory")
+	private String email;
+
 	public ContactsEntity(){
 		}
 
 	public ContactsEntity(String firstName, String lastName,
 			 String email) {
-		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.email = email;
 	}
 
 	public Integer getId() {
@@ -69,9 +69,9 @@ public class ContactsEntity {
 	public String toString() {
 		return "ContactsEntity{" +
 				"id=" + id +
-				", email='" + email + '\'' +
 				", firstName='" + firstName + '\'' +
 				", lastName='" + lastName + '\'' +
+				", email='" + email + '\'' +
 				'}';
 	}
 }

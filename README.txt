@@ -1,9 +1,10 @@
 #This project describes about company team contacts restful webservices using Spring-Boot approach
 
+- Java-script, CSS front-end approach
 - Use of GET,POST,DELETE methods
 - Exception, Generic exception handling
 - Connecting RESTful services to JPA(entity, Relationships among tables)
-- Proper use Validation
+- Proper use of validation
 - h2-in memory database
 - Dependency added to restart or build spring boot automatically whenever any change occurs
 - Postman collection
@@ -13,9 +14,10 @@
 - JDBC URL: jdbc:h2:mem:testdb
 - localhost:8080/h2-console
 
-#To access the Swagger Documentation for nice Visual representation
-localhost:8080/v2/api-docs
-localhost:8080/swagger-ui.html
+#To access GUI page and Swagger documentation for nice visual representation
+- http://localhost:8080
+- localhost:8080/v2/api-docs
+- localhost:8080/swagger-ui.html
 
 # Why Microservices?
 

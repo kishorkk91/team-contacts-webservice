@@ -40,9 +40,9 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
 			MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
 
-		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(),"field is invalid", ex.getBindingResult().toString());
+		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(),"Field is invalid", ex.getBindingResult().toString());
 
-		return new ResponseEntity(exceptionResponse.getMessage(), HttpStatus.BAD_REQUEST);
+		return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
 	}
 
 }
